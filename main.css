@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Signika:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Signika:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Signika:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300;400;500;600;700&family=Tauri&display=swap");
+
+@keyframes zoom {
+  from {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+    from {
+      transform: scale(0.3);
+      opacity: 0.0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+@keyframes right {
+  from {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  from {
+    transform: translate(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes top {
+  from {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes down {
+  from {
+    transform: translate(0px, -100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.forma {
+  margin-top: 40px;
+  width: 50%;
+  margin-left: 25%;
+  display: inline-block;
+}
+.form-input {
+  width: 100%;
+  display: block;
+  height: 45px;
+  background: transparent;
+  border: 3px solid white;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  padding-left: 15px;
+  font-family: Signika;
+  font-size: 19px;
+  color: white;
+}
+.form-button {
+  font-family: Signika;
+  vertical-align: top;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  width: 50%;
+  margin-left: 25%;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  display: block;
+  scroll-padding-top: 70px;
+}
+
+.menu {
+  height: 55px;
+  display: flex;
+  background-color: #87c781;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  padding-right: 40px;
+  justify-content: space-between;
+}
+
+.logo-block {
+  font-family: Tauri;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 10px;
+  color: #fffdfd;
+  cursor: pointer;
+  
+}
+
+.link-block{
+    display: inline-block;
+    
+}
+
+.link-block>a{
+    font-family: Tauri;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: #fffdfd;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+
+.link-block>a:hover{
+    text-decoration: underline;
+}
+
+.flower{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    animation: rotate 3s linear infinite;
+    vertical-align: middle;
+}
+
+.blok {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 800px;
+}
+
+.oblozhka {
+  height: 390px;
+  margin: 30px;
+}
+
+.oblozhka>div{
+    vertical-align: middle;
+}
+
+.oblozhka-text {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.oblozhka-text-h1 {
+  font-family: Signika;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 73px;
+  line-height: 90px;
+  color: #8dc38c;
+  animation: right 1s ease-out backwards;
+}
+
+.oblozhka-text-h2 {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 61px;
+  color: #000000;
+  animation: down 1s ease-out 0.7s backwards;
+}
+
+.oblozhka-img {
+  background: url("/дизайн.jpg");
+  display: inline-block;
+  width: 40%;
+  height: inherit;
+  vertical-align: top;
+  padding: 5px;
+  margin-top: 80px;
+}
+
+.me {
+  width: 440px;
+  height: 440px;
+  border: 10px solid #87c781;
+  border-radius: 239.5px;
+  animation: zoom-out 1s ease-in-out;
+}
+
+.oblozhka-knopka {
+  margin-left: 80px;
+  font-family: VT323;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #ffffff;
+  background: white;
+  border: 25px solid #87c781;
+  background-color: #87c781;
+  border-radius: 10px;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.shvartz {
+  display: inline-block;
+  width: 50%;
+}
+
+.linia {
+  display: block;
+  margin-top: 0px;
+  margin-left: 50px;
+  animation: down 1s ease-out 1s backwards;
+}
+
+.oblozhka-znacki {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 7%;
+  margin-top: 30px;
+}
+
+.oblozhka-znacki>div,a{
+    margin-top: 10px;
+    animation: zoom 1s ease-in-out infinite backwards alternate-reverse;
+}
+
+.oblozhka-znacki-github {
+  border-radius: 66.5px;
+  width: 110px;
+  height: 70px;
+  display: inline-block;
+}
+
+.oblozhka-znacki-github > img {
+  width: inherit;
+  height: inherit;
+  display: inline-block;
+}
+
+.oblozhka-znacki-telegram {
+  border-radius: 66.5px;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+
+.oblozhka-znacki-telegram > img {
+  width: inherit;
+  height: inherit;
+}
+
+.oblozhka-znacki-wahtsapp {
+  border-radius: 66.5px;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.oblozhka-znacki-wahtsapp > img {
+  width: inherit;
+  height: inherit;
+  display: inline-block;
+}
+
+.blok2 {
+  background-color: #87c781;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+
+.vector4 {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 649px;
+  left: 0px;
+  top: -5px;
+}
+
+.text {
+  color: #87c781;
+  z-index: 9999;
+  font-family: Exo 2;
+  font-size: 75px;
+  padding: 60px;
+  z-index: 9999;
+  position: absolute;
+}
+
+.bezumie {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 700px;
+  height: 425px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.bizumie2 {
+  width: 30%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgs {
+  height: 110px;
+  width: 110px;
+  display: block;
+  border-radius: 15px;
+}
+
+.anton {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bizumie2 > p {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.blok3 {
+  background-color: #ffffff;
+  height: 800px;
+  background: url("/images/obomnebg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  top: -15px;
+}
+
+.zagolovok {
+  display: block;
+  padding-top: 20px;
+}
+
+.zagolovok-text {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 120px;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.kartinka-text {
+  bottom: 0;
+  display: block;
+}
+
+.kartinka0 {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  z-index: 999;
+}
+
+.kartinka {
+  width: 480px;
+  height: 480px;
+  border: 10px solid #87c781;
+  border-radius: 239.5px;
+  display: inline-block;
+  left: 0;
+}
+
+.text2 {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+  padding-top: 200px;
+}
+
+.text3 {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 100px;
+  font-size: 45px;
+  text-align: center;
+  color: #8dc38c;
+  right: 0;
+  top: 0;
+}
+
+.blok4 {
+  background-color: #ffffff;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+
+.text4 {
+  font-family: Signika;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 123px;
+  color: #8dc38c;
+  text-align: center;
+}
+
+.knopka3 {
+  position: absolute;
+  font-family: VT323;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: #ffffff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.07);
+  border: 15px solid #87c781;
+  background-color: #87c781;
+  border-radius: 10px;
+  margin: 50px;
+  right: 0;
+  bottom: 0;
+  line-height: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.blok5 {
+  background-color: #87c781;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+
+.text5 {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 84px;
+  text-align: center;
+  display: block;
+  color: #fffdfd;
+}
+
+.text6 {
+  font-family: Caveat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.knopka19 {
+  text-decoration: none;
+  color: white;
+}
+
+body{
+    margin: 0;
+    padding: 6em;
+    background: url('/images/flowers.png');
+    background-size: contain;
+}
+body>div{
+    background-color: white;
+}
